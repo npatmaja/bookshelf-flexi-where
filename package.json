@@ -1,0 +1,59 @@
+{
+  "name": "bookshelf-flexi-where",
+  "version": "1.0.0",
+  "description": "Bookshelf plugin for more flexible where statement",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register --bail src/**/*.spec.js",
+    "prepublish": "babel -q -L -D ./src/ --out-dir ./dist/"
+  },
+  "keywords": [
+    "bookshelf",
+    "where",
+    "clause",
+    "flexible"
+  ],
+  "author": "Nauval Atmaja <nauval.atmaja@gmail.com> (http://nauvalatmaja.com/)",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "node5",
+      "stage-0"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "rewire"
+        ]
+      }
+    }
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "glogbals": {
+      "__DEV__": true
+    },
+    "env": {
+      "browser": true
+    },
+    "rules": {
+      "no-confusing-arrow": 0
+    }
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-rewire": "^1.0.0-rc-5",
+    "babel-preset-node5": "^11.1.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "bookshelf": "^0.10.0",
+    "chai": "^3.5.0",
+    "knex": "^0.11.10",
+    "mocha": "^3.0.2"
+  },
+  "dependencies": {
+    "lodash": "^4.15.0"
+  }
+}
