@@ -7,7 +7,7 @@
     "test": "mocha --compilers js:babel-core/register --bail src/**/*.spec.js",
     "prepublish": "npm run clean && npm run build",
     "clean": "rm -rf dist",
-    "build": "babel -q -L -D ./src/ --out-dir ./dist/"
+    "build": "babel -q -L -D ./src/ --out-dir ./dist/ --ignore ./src/*.spec.js"
   },
   "keywords": [
     "bookshelf",
