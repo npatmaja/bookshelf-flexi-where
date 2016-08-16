@@ -35,7 +35,8 @@
       "__DEV__": true
     },
     "env": {
-      "browser": true
+      "mocha": true,
+      "node": true
     },
     "rules": {
       "no-confusing-arrow": 0
@@ -48,10 +49,18 @@
     "babel-plugin-rewire": "^1.0.0-rc-5",
     "babel-preset-node5": "^11.1.0",
     "babel-preset-stage-0": "^6.5.0",
+    "bluebird": "^3.4.1",
     "bookshelf": "^0.10.0",
     "chai": "^3.5.0",
+    "eslint": "^3.3.0",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-loader": "^1.5.0",
+    "eslint-plugin-import": "^1.13.0",
+    "eslint-plugin-jsx-a11y": "^2.1.0",
+    "eslint-plugin-react": "^6.1.0",
     "knex": "^0.11.10",
-    "mocha": "^3.0.2"
+    "mocha": "^3.0.2",
+    "sqlite3": "^3.1.4"
   },
   "dependencies": {
     "lodash": "^4.15.0"
