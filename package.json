@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --bail src/**/*.spec.js",
-    "prepublish": "babel -q -L -D ./src/ --out-dir ./dist/"
+    "prepublish": "npm run clean && npm run build",
+    "clean": "rm -rf dist",
+    "build": "babel -q -L -D ./src/ --out-dir ./dist/"
   },
   "keywords": [
     "bookshelf",
@@ -15,6 +17,13 @@
   ],
   "author": "Nauval Atmaja <nauval.atmaja@gmail.com> (http://nauvalatmaja.com/)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npatmaja/bookshelf-flexi-where.git"
+  },
+  "bugs": {
+    "url": "https://github.com/npatmaja/bookshelf-flexi-where/issues"
+  },
   "babel": {
     "presets": [
       "node5",
