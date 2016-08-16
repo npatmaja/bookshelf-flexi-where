@@ -41,7 +41,7 @@ export default bookshelf => {
         }
       });
     });
-    return model.fetchAll();
+    return model;
   };
 
   bookshelf.Model.prototype.flexiWhere = flexiWhere; // eslint-disable-line no-param-reassign
