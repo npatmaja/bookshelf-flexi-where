@@ -1,6 +1,6 @@
 {
   "name": "bookshelf-flexi-where",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Bookshelf plugin for more flexible where statement",
   "main": "dist/index.js",
   "scripts": {
