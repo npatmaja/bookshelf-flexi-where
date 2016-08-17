@@ -4,7 +4,9 @@
   "description": "Bookshelf plugin for more flexible where statement",
   "main": "dist/index.js",
   "scripts": {
+    "lint": "eslint src/**/*.js",
     "test": "mocha --compilers js:babel-core/register --bail src/**/*.spec.js",
+    "test:coverage": "istanbul cover _mocha -- --compilers js:babel-core/register --bail src/**/*.spec.js",
     "prepublish": "npm run clean && npm run build",
     "clean": "rm -rf dist",
     "build": "babel -q -L -D ./src/ --out-dir ./dist/ --ignore ./src/*.spec.js"
@@ -61,6 +63,7 @@
     "bluebird": "^3.4.1",
     "bookshelf": "^0.10.0",
     "chai": "^3.5.0",
+    "coveralls": "^2.11.12",
     "eslint": "^3.3.0",
     "eslint-config-airbnb": "^10.0.1",
     "eslint-loader": "^1.5.0",
@@ -69,6 +72,7 @@
     "eslint-plugin-react": "^6.1.0",
     "knex": "^0.11.10",
     "mocha": "^3.0.2",
+    "mocha-lcov-reporter": "^1.2.0",
     "sqlite3": "^3.1.4"
   },
   "dependencies": {
