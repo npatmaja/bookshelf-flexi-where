@@ -65,8 +65,9 @@ describe('bookshelf-flexi-where', () => {
     it('returns all data', done => {
       User.forge()
         .flexiWhere()
+        .fetchAll()
         .then(result => {
-          expect(result).to.have.length(3);
+          expect(result.size(), 3);
         })
         .then(() => done())
         .catch(err => done(err));
@@ -82,6 +83,7 @@ describe('bookshelf-flexi-where', () => {
       };
       User.forge()
         .flexiWhere(opts)
+        .fetchAll()
         .then(result => {
           expect(result.size(), 1);
           expect(result.at(0).get('email')).include('gmail');
@@ -107,6 +109,7 @@ describe('bookshelf-flexi-where', () => {
       ];
       User.forge()
         .flexiWhere(opts)
+        .fetchAll()
         .then(result => {
           expect(result.size(), 1);
           expect(result.at(0).get('email')).include('tripvisto');
