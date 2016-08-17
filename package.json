@@ -29,6 +29,9 @@
       "node5",
       "stage-0"
     ],
+    "plugins": [
+      "add-module-exports"
+    ],
     "env": {
       "test": {
         "plugins": [
@@ -55,6 +58,7 @@
     "babel-cli": "^6.11.4",
     "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-rewire": "^1.0.0-rc-5",
     "babel-preset-node5": "^11.1.0",
     "babel-preset-stage-0": "^6.5.0",

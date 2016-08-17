@@ -9,6 +9,11 @@ npm i --save bookshelf-flexi-where
 
 ## Usage
 ```js
+import flexiWhere from 'bookshelf-flexi-where';
+
+// Register the plugin
+Bookshelf.plugin(flexiWhere);
+
 const opts = [
   {
     column: 'email',
@@ -23,6 +28,7 @@ const opts = [
 ];
 User.forge()
   .flexiWhere(opts)
+  .fetchAll()
   .then(result => {
     expect(result.size(), 1);
     expect(result.at(0).get('email')).include('tripvisto');
